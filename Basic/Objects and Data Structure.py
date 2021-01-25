@@ -34,8 +34,9 @@ print('{0:<8} | {1:^8} | {2:>8}'.format(11,22,33))
 s.replace()
 s.isupper()
 s.find()
+"--".join(['a','b','c'])
 
-
+##
 # LIST
 # useful functions
 mylist.extend(iterable)
@@ -45,6 +46,7 @@ mylist.reverse()
 mylist.sort()
 
 
+##
 # SETS
 myset = set()
 myset.add()
@@ -52,6 +54,7 @@ myset.add()
 set(mylist)
 set('Mississippi')
 
+##
 # I/O
 myfile.read()
 myfile.seek(0)
@@ -63,6 +66,7 @@ with open('myfile.txt') as my_new_file:
     contents = my_new_file.read()
 
 
+##
 # Useful Python functions
 bin(digit) # returtns binary string
 range(start, end, stepsize)
