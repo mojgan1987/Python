@@ -13,5 +13,47 @@ def myfunc(myst):
         else:
             tmp_st += char
     return tmp_st
-    
-    
+
+# reverse words order in a string
+def reverse_words(text):
+    words = text.split()
+    rev_text = words[::-1]
+    return " ".join(rev_text)
+
+ # return sum except numbers between 6 followed by 9   
+def summer_69(arr):
+    tmp = 0
+    add = True
+    for num in arr:
+        while add:
+            if num !=6:
+                tmp += num
+                break
+            else:
+                add = False
+        while not add:
+            if num != 9:
+                break
+            else:
+                add = True
+                break
+    return tmp
+
+# print and count prime numbers up to num
+def count_primes2(num):
+    primes = [2]
+    x = 3
+    if num < 2:
+        return 0
+    while x <= num:
+        for y in primes:  # use the primes list!
+            if x%y == 0:
+                x += 2
+                break
+        else:
+            primes.append(x)
+            x += 2
+    print(primes)
+    return len(primes)                
+
+#
