@@ -74,3 +74,5 @@ b = None
 enumerate(iterable)
 zip(mylist1,mylist2)
 x in mylist
+map(function, input)
+filter(function, input)
