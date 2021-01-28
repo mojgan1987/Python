@@ -1,3 +1,15 @@
+# OOP Special functions (Magic/Dunder)
+    def __str__(self):
+        return "Must Return a string, may use self.attribs"
+
+    def __len__(self):
+        return self.attrib
+
+    def __del__(self):
+        print("print a message after deletion")
+
+
+## Function Excercises        
 # return all even numbers in a list
 def return_all_even(num_list):
     return [num for num in num_list if num%2==0]
