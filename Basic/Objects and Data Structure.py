@@ -34,7 +34,18 @@ print('{0:<8} | {1:^8} | {2:>8}'.format(11,22,33))
 s.replace()
 s.isupper()
 s.find()
+s.center(total_len, char)
+s.capitalize() #1st letter
+s.title()
+s.istitle()
+s.isalnum()
+s.isalpha()
+s.isspace()
+s.endswith(sth)
+s.partitin(sth) 
 "--".join(['a','b','c'])
+'\t'.expandtabs()
+
 
 ##
 # LIST
@@ -50,9 +61,17 @@ mylist.sort()
 # SETS
 myset = set()
 myset.add()
-#casting a list to a set1
-set(mylist)
+set(mylist) #casting a list to a set1
 set('Mississippi')
+myset.discard(sth)
+set1.difference(set2)
+s1.difference_update(s2)
+s1.intersecton(s2)
+s1.intersecton_update(s2)
+s1.isdisjoint(s2)# true if null intersection
+# elements exactly in one fo the sets
+s1.symmetric_difference(s2)
+
 
 ##
 # I/O
@@ -76,3 +95,10 @@ zip(mylist1,mylist2)
 x in mylist
 map(function, input)
 filter(function, input)
+
+
+## Numbers
+hex(number)
+bin(number)
+pow(n1,n2,mod)
+
