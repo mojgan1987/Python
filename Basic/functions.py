@@ -68,4 +68,6 @@ def count_primes2(num):
     print(primes)
     return len(primes)                
 
-#
+# count in index = value
+def count_match_index(L):
+    return len([num for count,num in enumerate(L) if  count==num])
