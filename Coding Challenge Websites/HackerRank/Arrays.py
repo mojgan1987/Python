@@ -41,12 +41,12 @@ def minimumBribes(q):
     for i in range(0,len(q)):
         if q[i]-i >= 4:
             flag = False
+            break
         else:
-            if q[i] == i+2:
-                bribes += 1
-            elif q[i] == i+3:
-                bribes += 2
-
+            for j in range(i,len(q)):
+                if q[j] < q[i]:
+                    bribes += 1 
+                
     if flag:
         print(bribes)
     else:
