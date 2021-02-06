@@ -51,3 +51,26 @@ def minimumBribes(q):
         print(bribes)
     else:
         print('Too chaotic')
+
+        
+        
+        
+##
+# minimum swaps
+# https://www.hackerrank.com/challenges/minimum-swaps-2/
+def minimumSwaps(arr):
+    
+    if len(arr) == 1:
+        return 0
+    
+    minitem = min(arr)
+    indx = arr.index(minitem)
+    print(f'index={indx}')
+    new_arr = arr
+    new_arr[indx] = arr[0]
+    print(f'new={new_arr}')
+    
+    if indx == 0:
+        return 0 + minimumSwaps(new_arr[1:])
+    else:
+        return 1 + minimumSwaps(new_arr[1:])
