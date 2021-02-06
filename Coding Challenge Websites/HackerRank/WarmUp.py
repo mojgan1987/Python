@@ -51,4 +51,19 @@ def jumpingOnClouds(c):
     else:
         return 1 + jumpingOnClouds(c[i+1:])
 
-  
+##
+# Repeated String
+# https://www.hackerrank.com/challenges/repeated-string/
+def repeatedString(s, n):
+        
+    length = len(s)
+    
+    d = n//length
+    r = n%length
+
+    count = s.count('a')
+    r_count = 0
+    if r!=0:
+        r_count = s[:r].count('a')
+
+    return (count*d) + r_count
