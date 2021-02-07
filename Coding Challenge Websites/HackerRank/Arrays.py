@@ -74,3 +74,26 @@ def minimumSwaps(arr):
         return 0 + minimumSwaps(new_arr[1:])
     else:
         return 1 + minimumSwaps(new_arr[1:])
+
+    
+    
+    
+# Wrong asnwer in 10 out of 16 cases
+#
+#
+def arrayManipulation(n, queries):
+    
+    orig = []
+    for i in range(0,n):
+        orig.append(0)
+        
+    for query in queries:
+        a = query[0]
+        b = query[1]
+        k = query[2]
+        
+        for j in range(a-1,b):
+            orig[j] += k
+        print(orig)
+
+    return max(orig)
