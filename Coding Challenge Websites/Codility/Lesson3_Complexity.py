@@ -50,7 +50,8 @@ def solution(A):
 # TapeEquilibrium
 # Minimize the value |(A[0] + ... + A[P-1]) - (A[P] + ... + A[N-1])|.
 # non-efficient solution
-# https://app.codility.com/demo/results/trainingTJMJBN-GN7/
+# 53%
+# https://app.codility.com/demo/results/training653ERC-PVQ/
 def solution(A):
     # write your code in Python 3.6
     N = len(A)
@@ -64,7 +65,7 @@ def solution(A):
 
     # non-efficient
     minm = float('inf') 
-    for i in range(2,N-1):
+    for i in range(1,N):
         tmp = abs(sum(A[:i])-sum(A[i:]))
         minm = min(minm, tmp)
     
