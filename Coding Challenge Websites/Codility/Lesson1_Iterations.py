@@ -1,3 +1,5 @@
+# [100%] BinaryGap
+# Find longest sequence of zeros in binary representation of an integer.
 def solution(N):
     # to-do:
     # check if the number is power of 2
