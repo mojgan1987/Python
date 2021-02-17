@@ -57,6 +57,10 @@ def solution(A):
 
     if N==2:
         return abs(A[0]-A[1])
+    if N ==3:
+        s1 = abs(sum(A[:1])-sum(A[1:]))
+        s2 = abs(sum(A[:2])-sum(A[2:]))
+        return min(s1,s2)
 
     # non-efficient
     minm = float('inf') 
