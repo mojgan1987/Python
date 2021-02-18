@@ -88,3 +88,40 @@ def solution(N, A):
         else:
             outp[item-1] += 1
     return outp
+
+
+
+##
+# MissingInteger
+# Find the smallest positive integer that does not occur in a given sequence
+# 100% https://app.codility.com/demo/results/trainingAFBSTD-E5Z/
+def solution(A):
+    # write your code in Python 3.6
+    n = len(A)
+
+    if n == 0:
+        return 1
+    if n == 1: 
+        if A[0] != 1:
+            return 1
+        else:
+            return 2
+
+    A.sort()
+
+    pos = []
+    neg = []
+    for item in A:
+        if item > 0:
+            pos.append(item)
+        else:
+            neg.append(item)
+
+    if len(pos) == 0:
+        return 1
+    else:
+        pos = set(pos)
+        for i in range(1,max(pos)):
+            if i not in pos:
+                return i
+        return len(pos)+1    
